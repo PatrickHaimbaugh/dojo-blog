@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Create from './Create';
 import App from './App';
 import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/:id",
         element: <BlogDetails />
+      },
+      {
+        path: "*",
+        element: <NotFound />
       }
     ]
   },
